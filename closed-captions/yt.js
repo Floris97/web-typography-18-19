@@ -149,8 +149,8 @@ function battle (goodorbad){
 		blue.classList.remove("goodon");
 		red.classList.add("badon");
 		blue.classList.add("goodoff");
-
 	}
+	
 	if (goodorbad == 'good') {
 		blue.classList.remove("goodoff");
 		red.classList.remove("badon");

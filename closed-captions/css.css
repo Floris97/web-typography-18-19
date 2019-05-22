@@ -19,10 +19,6 @@ Feel free to adjust the defaults to your needs.
   transition: .2s;
   opacity: 0;
 }
-/*
-#closed-captions {
-  margin-top: -5px;
-} */
 
 /* **********************************************
 The first paragraph, with extended timing for
@@ -46,6 +42,7 @@ body {
 
 /************************************************/
 /******************* Iframe *********************/
+
 div div img {
   opacity: 0;
 }
@@ -81,6 +78,7 @@ div div img {
 
 /************************************************/
 /******************* vs *********************/
+
 .vs {
   width: 100vw;
   height: 100vh;
@@ -136,6 +134,7 @@ transform: none;
 
 /************************************************/
 /**************** Close Captions ****************/
+
 .smeagol {
   margin-top: -80px;
   Color: white;

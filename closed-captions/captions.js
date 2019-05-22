@@ -46,7 +46,7 @@ captions[32] = ['101.42','104.96','good'];
 captions[33] = ['106','106.64','bad'];
 captions[34] = ['107.76','113.34','good'];
 captions[35] = ['113.92','114.76','bad'];
-// Leave now and never come back.
+// Leave now and never come back..
 captions[36] = ['115.22','119.38','good'];
 captions[37] = ['119.98','121.98','bad'];
 captions[38] = ['121.98','126.76','good'];
