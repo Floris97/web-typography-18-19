@@ -1,33 +1,59 @@
-Gekozen video
+# Responsive Typography, 2018/2019
 
-- https://www.youtube.com/watch?v=Wbo_yIigsE8
+Als je doof bent, of als je om een andere reden geen geluid kunt horen, dan mis je veel informatie als je een film kijkt. Knisperende voetstappen, langzaam aanzwellende muziek, nerveus getik op een deur, je hoort het natuurlijk allemaal niet. Nu bestaat er zoiets als *closed caption*, wat een type ondertiteling is waarbij ook dingen als omgevingsgeluiden en de muziek beschreven worden. Hierdoor krijgt een kijker die informatie wel binnen.
 
-Waarom gekozen ?
-Mijn idee is ontstaan toen ik een interview over het leven van Marie van Driessche keek. Hierin zei ze het volgende “In een filmpje vind ik het moeilijk om te onderscheiden wie wat zegt want dit kan ik niet horen” (36:30). Dit heeft mij aan het denken gezet om een passend film fragment te zoeken.
+Alleen wordt die auditieve informatie nogal neutraal beschreven. Het geluid van huilend persoon zou bijvoorbeeld beschreven kunnen worden als *snikgeluid op de achtergrond*. En iemand die lacht zou geschreven kunnen worden als *iemand lacht.* Heel neutraal, bijna zakelijk, en bovendien allebei in precies hetzelfde neutrale lettertype. Terwijl het toch echt over twee heel verschillende emoties gaat. 
 
-Ik heb uiteindelijk dit film fragment van Lord of The Rings gekozen omdat hierin één character 
-meerdere persoonlijkheden heeft. Dit lijk met voor iemand die doof is zoals Marie heel lastig om te begrijpen. Hiermee ben ik aan de slag gegaan en heb ik geprobeerd het iets duidelijker te maken. 
+Dat kan visueel sterker. 
 
-Ideeën
-Zoals veel mensen weten heeft het character Gollum uit LoTR verschillende persoonlijkheden: 
+En dat gaan jullie doen.
 
-- De slechte kant - Gollum
-- De goede kant - Smeagol 
+## Leerdoelen
 
-Voor beide persoonlijkheden wil ik een onderscheid maken met tekst en kleur. Ik kan goed begrijpen dat alleen het wisselen van de camerahoek wel een beetje helpt met het onderscheiden van de persoonlijkheden maar misschien niet genoeg is voor iemand die niks kan horen.
+- Je kan de kennis over vormgeving die je hebt geleerd tijdens de minor technisch toepassen met behulp van CSS
+- Je kan verborgen nuance uit een audiotrack overtuigend vertalen naar visuele typografische beelden
+- Je kan je typografische keuzes onderbouwen.
+- Je hebt het experiment niet geschuwd
 
-Smeagol 
-Is het aardige/onschuldige persoonlijkheid van de twee. Mij is tijdens het analyseren van de video opgevallen dat Smeagol vaak aan de rechterkant in beeld komt. Hierom heb ik gekozen om zijn gesproken tekst ook rechts te positioneren. Omdat Smeagol aardig/ onschuldige persoonlijkheid heeft wil ik dit als hij praat ook terug laten komen in zijn tekst. Ik heb gekozen om een rustig en schreefloos font te nemen omdat dit fijner leest dan eentje met veel hoekjes. Doordat hij meerdere emoties in zijn stem heeft heb ik gekozen om het brenner font te gebruiken met drie stijlen: Sans (voor normaal gedrag), Mono (voor klemtoon woorden) en consended (voor zijn onschuldigheid). 
+## Typografische restricties
 
-Gollum
-Is de gemeene/kwaadaardige kant. Hij is vaak te zien aan de linkerkant van het film fragment. De positionering van zijn tekst heb ik ook aan deze kant gedaan zodat je een duidelijke splitsing hebt.
-Om het kwaadaardige uit zijn stem te halen heb ik de tekst verrijkt met een accent waardoor zijn gemeente toon/accent duidelijker naar voren komt. Voor het font keuze heb ik het brenner serif font genomen met schreefletters dit oogt veel onrustiger. Door afwisseling in groote en diktes heb ik zijn kwaadaardige kant naar voren gebracht en heb ik het maar bij 1 stijllettertype gehouden. 
+Je *moet* kiezen, en je keuze moet je onderbouwen:
 
-Gollum vs Smeagol
-in het hele film fragment voeren de twee persoonlijkheden een innerlijke strijd. Mij leek het een goed idee om deze strijd te visualiseren op de achtergrond achter het iframe. Zo kan je duidelijker zien wie er voor staat en wie er het woord heeft ook versterk je hiermee de verborgen nuance van het opbouwende spannende achtergrond geluid. (wie gaat er winnen) Voor Gollum heb ik een toepasselijke rode kleur gekozen en voor Smeagol een vriendelijk blauwe.
+### Optie 1: Systeemfont
 
-Bronnen
-https://youtu.be/6SL6zs2bDks
-https://vimeo.com/265952071
-https://vimeo.com/190619819 
+De eerste optie is dat je gebruik maakt van het zogenaamde *systeemfont* van degene die naar jouw werk kijkt. Dit font verschilt per operating system, en het verschilt soms zelfs per versie van het operating system. Het is ook aan te passen door de gebruiker zelf. In dit geval heb je beschikking over normal, **bold** en _italic_.
 
+### Optie 2: Brenner
+
+Je kan er ook voor kiezen om gebruik te maken van de complete Brenner familie. Dit is een zeer uitgebreid en uiterst flexibel font. [Hier kan je je verdiepen in dit font](https://www.typotheque.com/blog/brenner_an_unusual_typeface_family_with_distinct_voices). Als je kiest voor dit font dan heb je de beschikking over een *sans serif*, een *condensed*, een *serif*, een *monotype*, een *slab*, een *display* en een *script* versie. En veel van deze versies hebben varianten van *light* tot *bold*, en allemaal zowel *bold* als *italic*.
+
+Met Brenner zijn er natuurlijk veel en veel meer mogelijkheden dan met systeemfonts. Dat kan zowel een voordeel als een nadeel zijn.
+
+Voor een overzicht, zie [de brenner.pdf](brenner.pdf).
+
+## Het fragment
+
+Ik heb een fragment voorbereid. Het gaat om twee scenes uit *Blade Runner 2049*. De captions staan in de HTML, en ze verschijnen in sync met de video. [Kijk maar](closed-captions/index.html).
+
+### De captions
+
+De captions staan in de html, in het bestand index.html. Je kan aan elke paragraaf eventueel een of meer classes toevoegen. Bijvoorbeeld `voice1` of `voice2 soft`. Classes voeg je handmatig toe in de html.
+
+Met JavaScript worden er een paar dingen extra gedaan: 
+
+- er wordt aan elke paragraaf een unieke class toegevoegd (`p0`, `p1`, etc)
+- Elk woord wordt in een aparte `span` gezet. Hierdoor kan je elk woord apart stylen, en eventueel ook [na elkaar laten verschijnen](https://github.com/cmda-minor-vid/web-typography-18-19/blob/master/closed-captions/css.css#L41).
+
+### Tijdens het afspelen
+
+Tijdens het afspeelen wordt er een class `on` op de caption gezet als hij moet verschijnen, en een class `off` als hij klaar is. *Zowel class `on` als class `off` blijft op de caption staan!*
+
+De timimg van de captions kan je aanpassen in [closed-captions/captions.js](closed-captions/captions.js).
+
+Er verschijnen ook classes op de body op momenten dat er geluiden worden afgespeeld, zoals `sound1` en `sound2`. Je kan geluiden toevoegen in [closed-captions/sounds.js](closed-captions/sounds.js).
+
+*let op,* de geluiden zijn niet compleet, dit zal je zelf moeten aanvullen.
+
+## Een eigen fragment
+
+Je kan er ook voor kiezen om een eigen, beter fragment te gebruiken. Je kan dan de nodige HTML en JavaScript genereren door gebruik te maken van [caption generator](https://cmda-minor-vid.github.io/web-typography-18-19/generator/) (in Google Chrome). 
