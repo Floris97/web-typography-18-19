@@ -1,4 +1,4 @@
-## LoTR - Gollum vs Smeagol CC
+## Eind Product
 
 - https://oege.ie.hva.nl/~eldersf001/LoTR%20-%20Gollum%20vs%20Smeagol%20CC/
 
