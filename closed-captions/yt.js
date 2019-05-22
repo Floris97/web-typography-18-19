@@ -4,11 +4,9 @@ function onYouTubeIframeAPIReady() {
 	player = new YT.Player('video-placeholder', {
 		width: 600,
 		height: 400,
-		videoId: 'vrP-_T-h9YM',
+		videoId: 'Wbo_yIigsE8',
 		playerVars: {
-			color: 'white'
-			//autoplay: '1'
-			//playlist: 'taJ60kskkns,FG0fTKAqZ5g'
+			color: 'white',
 		},
 		events: {
 			onReady: initialize
@@ -45,7 +43,7 @@ function updateTimerDisplay(){
 	//Officer K D 6 - 3 . 7. Let’s begin. Ready?
 	var i = 0;
 	while( i < captions.length) {
-		pTimes(i,captions[i][0],captions[i][1],t);
+		pTimes(i,captions[i][0],captions[i][1],t,captions[i][2]);
 		i++;
 	}
 	var i = 0;
@@ -54,14 +52,15 @@ function updateTimerDisplay(){
 		i++;
 	}
 
-	if ( t < 136.1) {
+	if ( t < 150) {
 		setTimeout(() => {
 			updateTimerDisplay();
 		}, 100);
 	}
-	
+
 }
-function pTimes(num,startT,endT,curT) {
+
+function pTimes(num,startT,endT,curT, goodorbad) {
 	var curP = document.querySelector('.p' + num);
 	if(curT > endT && !curP.classList.contains('off')) {
 		curP.classList.add('off');
@@ -71,11 +70,13 @@ function pTimes(num,startT,endT,curT) {
 	}
 	if( curT > startT && !curP.classList.contains('on')) {
 		curP.classList.add('on');
+		battle(goodorbad);
 	}
 	if( curT < startT && curP.classList.contains('on')) {
 		curP.classList.remove('on');
 	}
 }
+
 
 function sTimes(num,soundStarts,curT) {
 	var soundClass = 'sound' + num;
@@ -136,3 +137,24 @@ function sTimes(num,soundStarts,curT) {
 	}
 })();
 
+var red;
+var blue;
+
+red = document.querySelector(".bad")
+blue = document.querySelector(".good");
+
+function battle (goodorbad){
+	if (goodorbad == 'bad') {
+		red.classList.remove("badoff");
+		blue.classList.remove("goodon");
+		red.classList.add("badon");
+		blue.classList.add("goodoff");
+
+	}
+	if (goodorbad == 'good') {
+		blue.classList.remove("goodoff");
+		red.classList.remove("badon");
+		blue.classList.add("goodon");
+		red.classList.add("badoff");
+	}
+}
